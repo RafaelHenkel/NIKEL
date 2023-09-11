@@ -35,6 +35,7 @@ document.getElementById("create-form").addEventListener("submit", function(e){
 
     const email= document.getElementById("email-create-input").value;
     const password= document.getElementById("password-create-input").value;
+    const password2= document.getElementById("password-create-input2").value;
     
     if(email.length<5){
         alert("Preencha o campo com um e-mail valido");
@@ -42,6 +43,11 @@ document.getElementById("create-form").addEventListener("submit", function(e){
     }
     if(password.length<4){
         alert("Senha muito fraca!");
+        return;
+    }
+
+    if(password != password2){
+        alert("As senhas não são iguais.");
         return;
     }
 

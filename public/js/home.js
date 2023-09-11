@@ -152,6 +152,10 @@ function gettotal(){
             total-= item.value;
         }
     });
+
+    if(total< 0 ){
+        alert("Seu saldo total ira ficar negativo, deseja prosseguir?");
+    }
     
     document.getElementById("total").innerHTML=`R$ ${total.toFixed(2)}`;
 
